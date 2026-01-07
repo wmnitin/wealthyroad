@@ -1,6 +1,5 @@
 name: Deploy Hugo to GitHub Pages
 
-# This tells GitHub when to run the workflow
 on:
   push:
     branches:
