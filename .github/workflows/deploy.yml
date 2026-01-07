@@ -4,7 +4,11 @@ name: Deploy Hugo to GitHub Pages
 on:
   push:
     branches:
-      - main   # run when you push to main branch
+      - main # run when you push to main branch
+
+permissions:
+  contents: write
+  pages: write
 
 jobs:
   build:
@@ -17,7 +21,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.154.3'
+          hugo-version: "0.154.3"
           extended: true
 
       - name: Build Hugo site
